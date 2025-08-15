@@ -17,6 +17,8 @@ int main(){
             cout << "Alarm turned off. Have a nice day! " << endl;
             break;
         } 
-
+        char late;
+        cout << "Will you be late if you snooze? (y/n): ";
+        cin >> late;
     }
 }
