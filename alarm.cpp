@@ -4,12 +4,12 @@
 using namespace std;
 
 int main(){
-    cout << "Alarm Clock Similation" << endl;
+    cout << "Alarm Clock" << endl;
 
     while (true){
-        Cout<<"\n Alarm Rings!" << endl;
+        cout<<"\n Alarm Rings!" << endl;
 
-        char ready:
+        char ready;
         cout <<"Are you ready to wake up? (y/n): ";
         cin >> ready;
         if (ready == 'y' || ready == 'Y') {
@@ -20,5 +20,16 @@ int main(){
         char late;
         cout << "Will you be late if you snooze? (y/n): ";
         cin >> late;
+        if (late == 'y' || late == 'Y') {
+            cout << "Better wake up now!" << endl;
+            cout << "Alarm turned off. Have a nice day!" << endl;
+            break;
+        } else {
+            cout << "Snoozing for 5 minutes" << endl;
+            this_thread::sleep_for(chrono::seconds(5)); // Simulating 5 minutes with 5 seconds
+        }
     }
+
+    return 0;
+    
 }
